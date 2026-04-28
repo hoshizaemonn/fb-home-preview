@@ -3446,10 +3446,15 @@
             }
             /* タグは非表示でスッキリ */
             .special-offer-tags { display: none; }
-            /* 矢印エリアもシンプルに */
+            /* 矢印エリアもシンプルに（中央寄せ・左線なし） */
             .special-offer-arrow-wrap {
-                width: auto;
+                width: 100%;
                 margin-top: 8px;
+                border-left: none !important;
+                padding-left: 0 !important;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
             }
             .special-offer-arrow-label {
                 color: #FFE4A8 !important;
