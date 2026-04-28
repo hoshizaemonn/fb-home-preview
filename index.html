@@ -3401,15 +3401,79 @@
             letter-spacing: 0.5px;
         }
         @media (max-width: 768px) {
-            .special-offer-inner { flex-direction: column; gap: 24px; text-align: center; }
-            .special-offer-title { font-size: 1.7rem; text-shadow: 0 2px 14px rgba(0,0,0,0.6); }
-            .special-offer-en { font-size: 0.7rem; color: #fff; }
-            .special-offer-desc { font-size: 0.95rem; color: #fff; }
-            .special-offer-tags { justify-content: center; }
-            .special-offer-tags span { background: rgba(0,0,0,0.3); border-color: rgba(255,255,255,0.95); }
+            /* スマホ版: シンプルなクリーンカードに切り替え */
             .special-offer-banner {
-                padding: 36px 20px;
-                background: linear-gradient(135deg, #4A3208 0%, #7A5C18 50%, #4A3208 100%);
+                background: #fff;
+                padding: 28px 20px;
+                border-top: 4px solid #B8882A;
+                border-bottom: 4px solid #B8882A;
+            }
+            .special-offer-banner::before,
+            .special-offer-banner::after { display: none; }
+            .special-offer-inner {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            .special-offer-left {
+                flex-direction: column;
+                gap: 16px;
+            }
+            /* 円形バッジを非表示にしてシンプルなラベルに置き換え */
+            .special-offer-badge { display: none; }
+            .special-offer-en {
+                display: inline-block;
+                background: #B8882A;
+                color: #fff;
+                padding: 6px 14px;
+                font-size: 0.7rem;
+                letter-spacing: 2px;
+                margin-bottom: 0;
+                text-shadow: none;
+                border-radius: 3px;
+            }
+            .special-offer-title {
+                font-size: 1.7rem;
+                color: #2A1F08;
+                text-shadow: none;
+                margin-bottom: 12px;
+            }
+            .special-offer-desc {
+                font-size: 0.92rem;
+                color: #555;
+                text-shadow: none;
+                margin-bottom: 16px;
+            }
+            .special-offer-tags { justify-content: center; }
+            .special-offer-tags span {
+                background: #FFF8E7;
+                border: 1px solid #D4A843;
+                color: #7A5C1E;
+                font-weight: 600;
+            }
+            /* 矢印エリアもスッキリと */
+            .special-offer-arrow-wrap {
+                width: 100%;
+                background: #FFF8E7;
+                border-radius: 8px;
+                padding: 16px;
+                margin-top: 4px;
+            }
+            .special-offer-arrow-label {
+                color: #7A5C1E !important;
+            }
+            .special-offer-arrow {
+                background: #B8882A !important;
+                width: 44px !important;
+                height: 44px !important;
+            }
+            .special-offer-arrow svg {
+                stroke: #fff !important;
+                width: 24px !important;
+                height: 24px !important;
+            }
+            .special-offer-property-name {
+                color: #2A1F08 !important;
             }
         }
 
